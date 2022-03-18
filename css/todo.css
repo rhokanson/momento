@@ -2,8 +2,8 @@
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   border-radius: 5px;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   width: 200px;
 }
 
@@ -15,6 +15,11 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.9);
   width: 180px;
+  transition: all 0.3s ease-in-out;
+}
+
+#todo-form input:focus {
+  transform: scale(1.05);
 }
 
 #todo-list {
