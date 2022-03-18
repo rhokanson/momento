@@ -7,6 +7,9 @@ const date = new Date();
 const hours = date.getHours();
 let chosenGreeting = [];
 
+const clock2 = document.querySelector("h2#clock");
+
+
 
 if(hours < 5) {
     chosenGreeting = (goodsomething[3]);
@@ -35,6 +38,7 @@ function paintGreetings(){
     const username = localStorage.getItem(USERNAME_KEY);
     greeting.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText =`${chosenGreeting}, ${username}`;
+    clock2.classList.remove(HIDDEN_CLASSNAME);
 
 }
 
