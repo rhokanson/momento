@@ -20,7 +20,16 @@ body img {
   min-height: 100%;
   position: absolute;
   z-index: -1;
-  opacity: 0.9;
+  animation: imgOpacity 0.3s ease-in-out;
+}
+
+@keyframes imgOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
 }
 
 #main-column {
