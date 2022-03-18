@@ -1,21 +1,29 @@
 #weather {
-  font-size: 16px;
   font-weight: 400;
-  margin: 10px 10px;
+  margin: 12px 12px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
   position: absolute;
   z-index: 2;
   right: 0px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: flex-end;
   user-select: none;
+  transition: all 0.3s ease-out;
+  transform: translateY(-30px);
+}
+
+#weather:hover {
+  transform: translateY(0px);
 }
 
 #weather span:first-child {
-  font-size: 24px;
+  font-size: 26px;
 }
 
-#weather span {
-  margin: 5px 10px;
+#weather span:last-child {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+  text-shadow: 1.5px 1.5px 0.7px rgba(0, 0, 0, 0.7);
 }
