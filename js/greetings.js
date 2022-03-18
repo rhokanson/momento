@@ -25,7 +25,7 @@ function paintGreetings(){
     if (Math.random() < 0.1) {
         chosenGreeting = "Don't forget to drink water";
     } else if(hours < 5) {
-        chosenGreeting = "You should go to bed";
+        chosenGreeting = "It's good to sleep 7~9 hours per night";
     } else if (hours < 12) {
     chosenGreeting = "Good morning";
     } else if(hours < 17) {
