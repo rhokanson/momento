@@ -1,3 +1,4 @@
 # Momento
 
-Momentum clone coding
+Momentum clone coding 
+HTML, CSS, Vanilla Javascript
