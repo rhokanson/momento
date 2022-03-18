@@ -2,25 +2,8 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const loginGreeting = document.querySelector("#login-form span");
 const greeting = document.querySelector("#greeting");
-const goodsomething = ["Good morning", "Good afternoon", "Good evening", "Go to bed"];
-const date = new Date();
-const hours = date.getHours();
-let chosenGreeting = [];
 
 const clock2 = document.querySelector("h2#clock");
-
-
-
-if(hours < 5) {
-    chosenGreeting = (goodsomething[3]);
-} else if (hours < 12) {
-chosenGreeting = (goodsomething[0]);
-} else if(hours < 17) {
-chosenGreeting = (goodsomething[1]);
-} else if(hours < 24) {
-chosenGreeting = (goodsomething[2]);
-}
-
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -36,10 +19,23 @@ function onLoginSubmit(event) {
 
 function paintGreetings(){
     const username = localStorage.getItem(USERNAME_KEY);
+    const date = new Date();
+    const hours = date.getHours();
+    let chosenGreeting = "";
+    if (Math.random() < 0.1) {
+        chosenGreeting = "Don't forget to drink water";
+    } else if(hours < 5) {
+        chosenGreeting = "You should go to bed";
+    } else if (hours < 12) {
+    chosenGreeting = "Good morning";
+    } else if(hours < 17) {
+    chosenGreeting = "Good afternoon";
+    } else if(hours < 24) {
+    chosenGreeting = "Good evening";
+    }
     greeting.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText =`${chosenGreeting}, ${username}`;
     clock2.classList.remove(HIDDEN_CLASSNAME);
-
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
