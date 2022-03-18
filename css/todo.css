@@ -1,0 +1,42 @@
+#todo-form-div {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border-radius: 5px;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+}
+
+#todo-form input {
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 180px;
+}
+
+#todo-list {
+  font-size: 16px;
+  word-break: break-word;
+  line-height: 120%;
+}
+
+#todo-list li {
+  display: flex;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  size: 20px;
+  margin-left: 5px;
+}
