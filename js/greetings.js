@@ -4,6 +4,9 @@ const loginGreeting = document.querySelector("#login-form span");
 const greeting = document.querySelector("#greeting");
 
 const clock2 = document.querySelector("h2#clock");
+const date2 = document.querySelector("#date-text");
+
+const editNameBtn = document.querySelector("h4")
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -25,7 +28,7 @@ function paintGreetings(){
     if (Math.random() < 0.1) {
         chosenGreeting = "Don't forget to drink water";
     } else if(hours < 5) {
-        chosenGreeting = "It's good to sleep 7~9 hours per night";
+        chosenGreeting = "Get some sleep for tomorrow";
     } else if (hours < 12) {
     chosenGreeting = "Good morning";
     } else if(hours < 17) {
@@ -36,6 +39,8 @@ function paintGreetings(){
     greeting.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText =`${chosenGreeting}, ${username}`;
     clock2.classList.remove(HIDDEN_CLASSNAME);
+    date2.classList.remove(HIDDEN_CLASSNAME);
+    editNameBtn.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -48,5 +53,12 @@ if(savedUsername === null){
 } else {
     paintGreetings()
 }
+
+function onEditName(){
+    localStorage.removeItem(USERNAME_KEY)
+    location.reload()
+}
+
+editNameBtn.addEventListener("click", onEditName)
 
 

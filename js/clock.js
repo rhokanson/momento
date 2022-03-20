@@ -41,3 +41,14 @@ setInterval(getClock, 1000);
 getDate()
 setInterval(getDate, 1000);
 
+function onMouseEnter(){
+    dateText.classList.remove("invisible")
+}
+
+clock.addEventListener("mouseenter", onMouseEnter)
+
+function onMouseLeave(){
+    dateText.classList.add("invisible")
+}
+
+clock.addEventListener("mouseleave", onMouseLeave)
